@@ -8,8 +8,8 @@ For pairs with available structures, it identifies if they form protein complexe
 - **Python ≥ 3.8**  
 - **Python packages:** `pandas`, `numpy`, `biopython`, `scipy`, `requests`  
 - **BLAST+** (tested with 2.16.0+)  
-- **Local PDB sequence database** for BLAST (e.g., `pdbaa`)  
-
+- **Local PDB sequence database** for BLAST (e.g., `pdbaa`)
+- **Internet connection** (UniProt and RCSB PDB APIs are queried at runtime).
 
 
 ## Installation
