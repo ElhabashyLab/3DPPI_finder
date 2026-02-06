@@ -3,8 +3,6 @@
 Given a list of protein pairs, the script first checks whether experimentally resolved 3D structures are available in the Protein Data Bank (PDB). 
 For pairs with available structures, it identifies if they form protein complexes and maps the interfaces between interacting proteins.
 
----
-
 ## Requirements
 
 - **Python ≥ 3.8**  
@@ -12,7 +10,7 @@ For pairs with available structures, it identifies if they form protein complexe
 - **BLAST+** (tested with 2.16.0+)  
 - **Local PDB sequence database** for BLAST (e.g., `pdbaa`)  
 
----
+
 
 ## Installation
 
@@ -32,7 +30,6 @@ Ensure BLAST+ is installed and a PDB sequence database is available:
 - https://www.ncbi.nlm.nih.gov/books/NBK569861/
 - https://www.ncbi.nlm.nih.gov/books/NBK569850/
 
----
 
 ## **Configuration** 
 
