@@ -56,9 +56,10 @@ Edit the top section of the script to configure paths and parameters:
 
 The input CSV (PAIR_FILE) must contain two columns:
 
-uid1,	uid2
-P12345,	Q67890
-...,	...
+uid1,uid2
+P12345,Q67890  
+A11111,B22222  
+C33333,D44444
 
 uid1 and uid2 are UniProt IDs of proteins to test for interaction.
 
@@ -71,16 +72,12 @@ Contains BLAST hits and interface detection for each protein pair:
 
 <RESULT_DIR>/<uid1>_<uid2>/<uid1>-<uid2>_with_interface.csv 
 
-
 Columns include:
 
-*subject_A*, subject_B: PDB chain IDs
-
-interface: True if interface detected
-
-n_contacts: Number of Cα contacts
-
-chain1, chain2: Chains forming the interface
+- subject_A, subject_B: PDB chain IDs
+- interface: True if interface detected
+- n_contacts: Number of Cα contacts
+- chain1, chain2: Chains forming the interface
 
 
 **2. Summary CSV** 
@@ -91,18 +88,12 @@ Aggregates results across all pairs:
 
 
 Columns include:
-
-uid1, uid2
-
-complex_pdb: PDB ID used
-
-no_pairs: Number of candidate chain pairs
-
-interface_pairs: Number of chain pairs with interface
-
-interface_architecture: e.g., "2:1" (chains in uid1 : chains in uid2)
-
-chain1, chain2: Representative interface chains
+- uid1, uid2
+- complex_pdb: PDB ID used
+- no_pairs: Number of candidate chain pairs
+- interface_pairs: Number of chain pairs with interface
+- interface_architecture: e.g., "2:1" (chains in uid1 : chains in uid2)
+- chain1, chain2: Representative interface chains
 
 
 ## **Usage**
@@ -121,7 +112,8 @@ python3 3Dppi_finder.py
 - The interface is defined by Cα atoms within DISTANCE_CUTOFF Å, requiring at least MIN_CONTACTS contacts.
 
 
-**License**
+## **License**
+This script is licensed under the MIT License. See the LICENSE file for more details.  
 
-MIT License. See LICENSE
- for details.
+## Author
+* Hadeer Elhabashy
