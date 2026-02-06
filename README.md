@@ -103,8 +103,13 @@ python3 3Dppi_finder.py
 - BLAST results and downloaded FASTA files are cached in <PROTEIN_DIR>/<uid>/.
 
 - Only the first PDB structure per protein pair is considered for interface detection.
-
-- The interface is defined by Cα atoms within DISTANCE_CUTOFF Å, requiring at least MIN_CONTACTS contacts.
+  
+- Interface Detection Strategy:
+  - A fast ("coarse"/"dirty") interface detection is used to maintain scalability.
+  - Interfaces are defined based on Cα–Cα distances between protein chains.
+  - Two proteins are considered interacting if:
+  -   * At least MIN_CONTACTS (default = 10) Cα–Cα pairs
+  -   * Are within DISTANCE_CUTOFF Å (default = 10.0 Å).
 
 
 ## **License**
