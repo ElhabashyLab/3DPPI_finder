@@ -3,7 +3,6 @@
 Given a list of protein pairs, the script first checks whether experimentally resolved 3D structures are available in the Protein Data Bank (PDB). 
 For pairs with available structures, it identifies if they form protein complexes and maps the interfaces between interacting proteins.
 
-
 ---
 
 ## Requirements
@@ -54,9 +53,8 @@ Edit the top section of the script to configure paths and parameters:
 
 ## **Input Format**
 
-The input CSV (PAIR_FILE) must contain two columns:
-
-uid1,uid2
+The input CSV (PAIR_FILE) must contain two columns:  
+uid1,uid2  
 P12345,Q67890  
 A11111,B22222  
 C33333,D44444
