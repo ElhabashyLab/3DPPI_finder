@@ -30,8 +30,8 @@ pip install pandas numpy biopython scipy requests
 ```
 
 Ensure BLAST+ is installed and a PDB sequence database is available:
-# Example BLAST installation
-# BLAST_DB points to a local PDB sequence database
+https://www.ncbi.nlm.nih.gov/books/NBK569861/
+https://www.ncbi.nlm.nih.gov/books/NBK569850/
 
 ---
 
