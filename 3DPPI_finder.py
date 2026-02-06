@@ -142,7 +142,7 @@ def print_progress(current, total, prefix=""):
 
 def main():
 
-    print("🚀 Starting 3D PPI interface detection script...")
+    print("Starting 3D PPI interface detection script...")
     PROTEIN_DIR.mkdir(parents=True, exist_ok=True)
     RESULT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -279,7 +279,7 @@ def main():
     summary_df = pd.DataFrame(summary)
     summary_df.to_csv(RESULT_DIR / "3Dppi_summary.csv", index=False)
 
-    print("\n✅ 3D PPI interface detection complete!")
+    print("\n 3D PPI interface detection complete!")
     print(f"Summary saved to: {RESULT_DIR / '3Dppi_summary.csv'}")
 
 if __name__ == "__main__":
