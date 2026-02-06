@@ -55,6 +55,7 @@ Edit the top section of the script to configure paths and parameters:
 ## **Input Format**
 
 The input CSV (PAIR_FILE) must contain two columns:
+
 uid1,	uid2
 P12345,	Q67890
 ...,	...
@@ -73,7 +74,7 @@ Contains BLAST hits and interface detection for each protein pair:
 
 Columns include:
 
-subject_A, subject_B: PDB chain IDs
+*subject_A*, subject_B: PDB chain IDs
 
 interface: True if interface detected
 
