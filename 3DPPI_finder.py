@@ -1,3 +1,17 @@
+# =========================================
+# 3DPPI_finder: Structural PPI Detection
+# =========================================
+# Author: Hadeer Elhabashy
+# Date: 2026
+#
+# Description:
+# - Identifies suitable PDB templates for protein pairs using BLAST.
+# - Detects experimentally resolved protein complexes.
+# - Maps protein–protein interfaces based on Cα distance criteria.
+# - Generates per-pair interface reports and a global summary.
+# =========================================
+
+
 #!/usr/bin/env python3
 
 import os
