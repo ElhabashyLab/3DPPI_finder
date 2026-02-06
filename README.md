@@ -20,16 +20,20 @@ For pairs with available structures, it identifies if they form protein complexe
 ### **Clone the repository**
 
 ```bash
-git clone https://github.com/<your-username>/3DPPI_finder.git
+git clone https://github.com/ElhabashyLab/3DPPI_finder.git
 cd 3DPPI_finder
-
+```
 
 ### **Install Python dependencies**
+```bash
 pip install pandas numpy biopython scipy requests
+```
 
 Ensure BLAST+ is installed and a PDB sequence database is available:
 # Example BLAST installation
 # BLAST_DB points to a local PDB sequence database
+
+---
 
 ## **Configuration** 
 
