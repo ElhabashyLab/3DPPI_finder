@@ -29,16 +29,16 @@ import sys  # for simple progress bar
 # ============================================================
 
 # Input
-PAIR_FILE = "/media/elhabashy/Elements/scripts/testPPI.csv"   # columns: uid1, uid2
+PAIR_FILE = "<Path to testPPI_list.csv>"   # columns: uid1, uid2
 
 # Base paths
-BASE_DIR = Path("/media/elhabashy/Elements/scripts/test")
+BASE_DIR = Path("<Path to working directory>")
 PROTEIN_DIR = BASE_DIR / "proteins"
 RESULT_DIR = BASE_DIR / "3DPPI"
 
 # BLAST
-BLAST_BIN = Path.home() / "Documents/software/blast/ncbi-blast-2.16.0+/bin/blastp"
-BLAST_DB = Path.home() / "Documents/software/blast/blastdb/pdbaa_01_10_2025/pdbaa"
+BLAST_BIN = Path.home() / "<path to /blast/ncbi-blast-version/bin/blastp>"
+BLAST_DB = Path.home() / "<path to blastdb/pdbaa>"
 EVALUE = "1e-5"
 IDENTITY_CUTOFF = 50
 
