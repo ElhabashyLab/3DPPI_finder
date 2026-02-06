@@ -39,52 +39,40 @@ Edit the top section of the script to configure paths and parameters:
 # Input / Output settings
 # =======================
 
-# Path to the input CSV file containing protein pairs.
-# The file must contain two columns: uid1 and uid2 (UniProt IDs).
+Path to the input CSV file containing protein pairs. The file must contain two columns: uid1 and uid2 (UniProt IDs).
 PAIR_FILE = "/path/to/pairs.csv"
 
-# Base directory where all outputs and intermediate files will be stored.
+Base directory where all outputs and intermediate files will be stored.
 BASE_DIR = Path("/path/to/output")
 
-# Directory used to cache downloaded FASTA sequences and BLAST results
-# for individual UniProt IDs.
+ Directory used to cache downloaded FASTA sequences and BLAST results for individual UniProt IDs.
 PROTEIN_DIR = BASE_DIR / "proteins"
 
-# Directory where all per-pair and summary results will be written.
+Directory where all per-pair and summary results will be written.
 RESULT_DIR = BASE_DIR / "3DPPI"
 
 
-# =======================
 # BLAST configuration
-# =======================
 
-# Path to the BLASTP executable (BLAST+).
+
+Path to the BLASTP executable (BLAST+).
 BLAST_BIN = Path("/path/to/blastp")
 
-# Path to the local PDB sequence database used for BLAST searches
-# (e.g., pdbaa or an equivalent PDB-derived FASTA database).
+Path to the local PDB sequence database used for BLAST searches (e.g., pdbaa or an equivalent PDB-derived FASTA database).
 BLAST_DB = Path("/path/to/pdbaa")
 
-# E-value threshold used to filter BLAST hits.
-# Lower values enforce stricter sequence similarity.
+E-value threshold used to filter BLAST hits. Lower values enforce stricter sequence similarity.
 EVALUE = "1e-5"
 
-# Minimum sequence identity (%) required for a BLAST hit
-# to be considered as a structural template candidate.
-IDENTITY_CUTOFF = 50
+- Minimum sequence identity (%) required for a BLAST hit to be considered as a structural template candidate.
+-   IDENTITY_CUTOFF = 50
 
+- Interface detection parameters
+-   Maximum Cα–Cα distance (in Ångström) used to define a contact between two protein chains.
+-   DISTANCE_CUTOFF = 10.0
 
-# =======================
-# Interface detection parameters
-# =======================
-
-# Maximum Cα–Cα distance (in Ångström) used to define a contact
-# between two protein chains.
-DISTANCE_CUTOFF = 10.0
-
-# Minimum number of Cα–Cα contacts required to classify
-# two proteins as interacting in a 3D complex.
-MIN_CONTACTS = 10
+- Minimum number of Cα–Cα contacts required to classify two proteins as interacting in a 3D complex.
+-   MIN_CONTACTS = 10
 
 
 ## **Input Format**
