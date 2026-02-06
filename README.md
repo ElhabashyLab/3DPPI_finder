@@ -3,31 +3,35 @@
 Given a list of protein pairs, the script first checks whether experimentally resolved 3D structures are available in the Protein Data Bank (PDB). 
 For pairs with available structures, it identifies if they form protein complexes and maps the interfaces between interacting proteins.
 
-# Requirements
 
-Python ≥ 3.8
-Python packages including pandas, numpy, biopython, scipy, requests
-BLAST+ (tested with 2.16.0+)
-Local PDB sequence database for BLAST (e.g., pdbaa)
+---
 
+## Requirements
 
+- **Python ≥ 3.8**  
+- **Python packages:** `pandas`, `numpy`, `biopython`, `scipy`, `requests`  
+- **BLAST+** (tested with 2.16.0+)  
+- **Local PDB sequence database** for BLAST (e.g., `pdbaa`)  
+
+---
 
 ## Installation
 
-### Clone the repository:
+### **Clone the repository**
 
 ```bash
 git clone https://github.com/<your-username>/3DPPI_finder.git
 cd 3DPPI_finder
 
-### Install Python dependencies:
+
+### **Install Python dependencies**
 pip install pandas numpy biopython scipy requests
 
 Ensure BLAST+ is installed and a PDB sequence database is available:
 # Example BLAST installation
 # BLAST_DB points to a local PDB sequence database
 
-## Configuration
+## **Configuration** 
 
 Edit the top section of the script to configure paths and parameters:
 PAIR_FILE = "/path/to/pairs.csv"      # CSV with columns: uid1, uid2
@@ -45,7 +49,7 @@ DISTANCE_CUTOFF = 10.0
 MIN_CONTACTS = 10
 
 
-## Input Format
+## **Input Format**
 
 The input CSV (PAIR_FILE) must contain two columns:
 uid1,	uid2
@@ -55,12 +59,13 @@ P12345,	Q67890
 uid1 and uid2 are UniProt IDs of proteins to test for interaction.
 
 
-## Output
+## **Output**
+
 1. Per-pair CSV
 
 Contains BLAST hits and interface detection for each protein pair:
 
-<RESULT_DIR>/<uid1>_<uid2>/<uid1>-<uid2>_with_interface.csv
+<RESULT_DIR>/<uid1>_<uid2>/<uid1>-<uid2>_with_interface.csv 
 
 
 Columns include:
@@ -96,7 +101,7 @@ interface_architecture: e.g., "2:1" (chains in uid1 : chains in uid2)
 chain1, chain2: Representative interface chains
 
 
-## Usage
+## **Usage**
 
 Run the script directly:
 ```bash
@@ -105,7 +110,7 @@ python3 3Dppi_finder.py
 
 Progress bars show BLAST and PPI detection status.
 
-## Notes
+## **Notes**
 
 BLAST results and downloaded FASTA files are cached in <PROTEIN_DIR>/<uid>/.
 
@@ -114,7 +119,7 @@ Only the first PDB structure per protein pair is considered for interface detect
 The interface is defined by Cα atoms within DISTANCE_CUTOFF Å, requiring at least MIN_CONTACTS contacts.
 
 
-License
+**License**
 
 MIT License. See LICENSE
  for details.
