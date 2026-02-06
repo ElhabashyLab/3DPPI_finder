@@ -38,19 +38,18 @@ Ensure BLAST+ is installed and a PDB sequence database is available:
 ## **Configuration** 
 
 Edit the top section of the script to configure paths and parameters:
-PAIR_FILE = "/path/to/pairs.csv"      # CSV with columns: uid1, uid2
-BASE_DIR = Path("/path/to/output")
-PROTEIN_DIR = BASE_DIR / "proteins"
-RESULT_DIR = BASE_DIR / "3DPPI"
+- PAIR_FILE = "/path/to/pairs.csv"      # CSV with columns: uid1, uid2
+- BASE_DIR = Path("/path/to/output")
+- PROTEIN_DIR = BASE_DIR / "proteins"
+- RESULT_DIR = BASE_DIR / "3DPPI"
 
-BLAST_BIN = Path("/path/to/blastp")
-BLAST_DB = Path("/path/to/pdbaa")
-EVALUE = "1e-5"
-IDENTITY_CUTOFF = 50
+- BLAST_BIN = Path("/path/to/blastp")
+- BLAST_DB = Path("/path/to/pdbaa")
+- EVALUE = "1e-5"
+- IDENTITY_CUTOFF = 50
 
-
-DISTANCE_CUTOFF = 10.0
-MIN_CONTACTS = 10
+- DISTANCE_CUTOFF = 10.0
+- MIN_CONTACTS = 10
 
 
 ## **Input Format**
@@ -65,7 +64,7 @@ uid1 and uid2 are UniProt IDs of proteins to test for interaction.
 
 ## **Output**
 
-1. Per-pair CSV
+**1. Per-pair CSV**
 
 Contains BLAST hits and interface detection for each protein pair:
 
@@ -83,7 +82,7 @@ n_contacts: Number of Cα contacts
 chain1, chain2: Chains forming the interface
 
 
-2. Summary CSV
+**2. Summary CSV** 
 
 Aggregates results across all pairs:
 
@@ -110,17 +109,15 @@ chain1, chain2: Representative interface chains
 Run the script directly:
 ```bash
 python3 3Dppi_finder.py
-
-
-Progress bars show BLAST and PPI detection status.
+```
 
 ## **Notes**
 
-BLAST results and downloaded FASTA files are cached in <PROTEIN_DIR>/<uid>/.
+- BLAST results and downloaded FASTA files are cached in <PROTEIN_DIR>/<uid>/.
 
-Only the first PDB structure per protein pair is considered for interface detection.
+- Only the first PDB structure per protein pair is considered for interface detection.
 
-The interface is defined by Cα atoms within DISTANCE_CUTOFF Å, requiring at least MIN_CONTACTS contacts.
+- The interface is defined by Cα atoms within DISTANCE_CUTOFF Å, requiring at least MIN_CONTACTS contacts.
 
 
 **License**
