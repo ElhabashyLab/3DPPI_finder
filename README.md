@@ -28,8 +28,8 @@ pip install pandas numpy biopython scipy requests
 
 Ensure BLAST+ is installed and a PDB sequence database is available:
 - https://www.ncbi.nlm.nih.gov/books/NBK569861/
-- https://www.ncbi.nlm.nih.gov/books/NBK569850/
-
+- https://ftp.ncbi.nlm.nih.gov/blast/db/
+download this database (pdbaa.tar.gz)
 
 ## **Configuration** 
 
